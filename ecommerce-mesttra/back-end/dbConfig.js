@@ -3,10 +3,10 @@ const { Pool } = require('pg');
 
 // inicio a minha classe de configuracao do pool de conexao
 const pool = new Pool({
-  user: 'postgres',
+  user: 'Eduardo',
   host: 'localhost',
-  database: 'ecommercemesttra',
-  password: 'root',
+  database: 'mesttra',
+  password: '1234',
   port: 5432
 });
 

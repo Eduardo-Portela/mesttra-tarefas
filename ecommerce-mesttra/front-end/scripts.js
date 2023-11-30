@@ -23,7 +23,7 @@ const getProducts = async () => {
           <h2 class="text-xl font-semibold mb-2">${product.name}</h2>
           <p class="text-gray-600">Categoria: ${product.category}</p>
           <p class="text-gray-800 font-bold">Preço: R$ ${product.price}</p>
-          <button>Excluir</button>
+          <button onclick="deleteProductById('${product.id}')">Excluir</button>
         </div>
     </li>
     `)
@@ -58,4 +58,10 @@ const submitForm = async (event) => {
 
 // DELETE
 
+const deleteProductById = async(id) => {
+  await fetch(`${apiURL}/delete/${id}`, {
+    method: 'DELETE',
+   })
+  getProducts();
+}
 getProducts();
